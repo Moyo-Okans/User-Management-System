@@ -1,0 +1,254 @@
+/* Layout */
+/* Dashboard.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+.dashboard {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background-color: rgb(18, 18, 86);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+.navbar button {
+  background-color: rgb(0, 180, 171);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: #084298;
+}
+
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Table */
+.table-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 1rem;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.user-table th {
+  text-align: left;
+  font-weight: 600;
+  padding: 0.75rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.user-table td {
+  background: #f9fafb;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+.actionBtns{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+/* Actions */
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.9rem;
+  font-size: 1rem;
+  color: #6b7280;
+  transition: color 0.2s;
+}
+
+.action-btn.edit:hover {
+  color: #2563eb;
+}
+
+.action-btn.delete:hover {
+  color: #dc2626;
+}
+
+/* Overlay background */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+}
+
+/* Card-style modal */
+.modal-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
+  animation: slideDown 0.3s ease;
+}
+
+/* Smooth animation */
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #1a237e;
+  text-align: center;
+}
+
+/* Form groups */
+.user-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.user-form label {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.user-form input,
+.user-form select {
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.user-form input:focus,
+.user-form select:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 4px rgba(26,115,232,0.3);
+}
+
+/* Buttons */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.btn-primary {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #1557b0;
+}
+
+.btn-secondary {
+  background: #eee;
+  color: #333;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #ddd;
+}
+/* Password input wrapper */
+.password-group {
+  position: relative;
+}
+
+.password-input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* space for the eye button */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.toggle-password:hover {
+  color: #1a73e8;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  text-align: left;
+  padding: 12px 15px;
+}
+
+.user-table thead tr {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.user-table tbody tr {
+  border-bottom: 1px solid #ddd; /* 👈 only bottom border */
+}
+
+.user-table tbody tr:last-child {
+  border-bottom: none; /* remove line from last row */
+}

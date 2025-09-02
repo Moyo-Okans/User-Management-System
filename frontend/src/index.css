@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  font-family: 'Poppins', 'Roboto',sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #f9f9f9; */
+}
+
+/* dashboard styles */
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 30px;
+  align-items: center;
+  /* background-color: white; */
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.header p{
+  font-family: 'Roboto', sans-serif;
+}
+.navbar button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #1E3A8A;
+  color: white;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/*register form styling*/
+.registerBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.registerForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.inputField{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-top: 15px;
+  width: 250px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(209, 209, 209);
+  padding: 10px;
+}
+.inputField i{
+  /* border-right: 1px solid black; */
+  /* height: 20px; */
+  /* padding: 10px; */
+}
+.inputField input{
+  width: 300px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  /* padding: 10px; */
+  /* border: 1px solid rgb(209, 209, 209); */
+}
+.inputField label{
+  font-weight: 450;
+}
+.registerForm button{
+  margin-top: 20px;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  border: none;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
