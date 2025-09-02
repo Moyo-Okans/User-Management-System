@@ -56,7 +56,7 @@ function Dashboard() {
 
       // Make PUT request to backend
       const response = await axios.put(
-        `http://localhost:3000/api/users/${editUser._id}`,
+        `https://user-management-system-backend-1-jxv6.onrender.com/api/users/${editUser._id}`,
         {
           name: editForm.name,
           email: editForm.email,
@@ -94,7 +94,7 @@ function Dashboard() {
     }
      try {
       const token = localStorage.getItem("token"); // get token
-      await axios.delete(`http://localhost:3000/api/users/${id}`, {
+      await axios.delete(`https://user-management-system-backend-1-jxv6.onrender.com/api/users/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -122,7 +122,7 @@ function Dashboard() {
     e.preventDefault();
     setIsAddingUser(true); // start loading
     try {
-      const response = await axios.post("http://localhost:3000/api/auth/register", {
+      const response = await axios.post("https://user-management-system-backend-1-jxv6.onrender.com/api/auth/register", {
         name,
         email,
         password,
@@ -153,7 +153,7 @@ function Dashboard() {
           return;
         }
 
-        const res = await axios.get("http://localhost:3000/api/users", {
+        const res = await axios.get("https://user-management-system-backend-1-jxv6.onrender.com/api/users", {
           headers: { Authorization: `Bearer ${token}` },
         });
 

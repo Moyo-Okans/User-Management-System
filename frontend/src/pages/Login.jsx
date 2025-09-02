@@ -18,7 +18,7 @@ function Login() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:3000/api/auth/login", {
+      const response = await axios.post("https://user-management-system-backend-1-jxv6.onrender.com/api/auth/login", {
         email,
         password,
       });
